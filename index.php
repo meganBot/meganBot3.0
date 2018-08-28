@@ -76,6 +76,10 @@ if($method == 'POST')
 		{
 			$speech = $sr[0]['sr_number'].",".$sr[0]['product'];
 		}
+		if(strlen ($number) < 11)
+		{
+			$speech = "El numero de sr no encontrado intenta de nuevo"
+		}
 
 		$response = new \stdClass();
 		$response->speech = $speech;
